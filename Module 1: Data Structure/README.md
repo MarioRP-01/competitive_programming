@@ -1,21 +1,21 @@
 # Estructuras de datos
 
-## Array <a name = "id1"/>
+## Array 
 
-## String <a name = "id2"/>
+## String 
 
-## Vector <a name = "id3"/>
+## Vector 
 
-## Pila <a name = "id4"/>
+## Pila 
 
-## Lista (Enlaza) / List <a name = "id5"/>
+## Lista (Enlaza) / List 
 
-## Cola / queue <a name = "id6"/>
+## Cola / queue 
 
-## Cola de prioridad / priority_queue <a name = "id7"/>
+## Cola de prioridad / priority_queue 
 
-## Conjuntos / set <a name = "id8"/>
+## Conjuntos / set 
 
-## Mapa / map <a name = "id9"/>
+## Mapa / map 
 
-## Typedef <a name = "id10"/>
+## Typedef 
