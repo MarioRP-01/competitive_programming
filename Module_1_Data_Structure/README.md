@@ -1,21 +1,11 @@
 # Estructuras de datos
 
-## Array 
+## Introducción
 
-## String 
+En este módulo se verá una introducción básica a las estructuras de datos.
 
-## Vector 
+## Ejercicios
 
-## Pila 
-
-## Lista (Enlaza) / List 
-
-## Cola / queue 
-
-## Cola de prioridad / priority_queue 
-
-## Conjuntos / set 
-
-## Mapa / map 
-
-## Typedef 
+- [San Fermines](https://aceptaelreto.com/problem/statement.php?id=149)
+- [Gregorio XIII](https://aceptaelreto.com/problem/statement.php?id=355)
+- [Cucharadas de sopa](https://aceptaelreto.com/problem/statement.php?id=577)
