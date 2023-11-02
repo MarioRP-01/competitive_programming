@@ -2,6 +2,10 @@
 #include <vector>
 #include <stack>
 #include <list>
+#include <queue>
+#include <set>
+#include <map>
+#include <string>
 
 using namespace std;
 
@@ -149,6 +153,172 @@ void listaEnlazada(){
     }
 }
 
+void queueExample(){
+    queue<int> cola;
+
+    // Agregar elementos a la cola
+    cola.push(5);
+    cola.push(10);
+    cola.push(15);
+    cola.push(20);
+
+    // Mostrar el tamaño de la cola
+    cout << "Tamaño de la cola: " << cola.size() << endl;
+
+    // Acceder al elemento en la parte frontal de la cola
+    cout << "Elemento en la parte frontal: " << cola.front() << endl;
+
+    // Eliminar el elemento en la parte frontal de la cola
+    cola.pop();
+
+    // Mostrar el nuevo elemento en la parte frontal
+    cout << "Elemento en la parte frontal después de la eliminación: " << cola.front() << endl;
+
+    // Verificar si la cola está vacía
+    if (cola.empty()) {
+        cout << "La cola está vacía." << endl;
+    } else {
+        cout << "La cola no está vacía." << endl;
+    }
+
+    // Recorrer y mostrar todos los elementos en la cola
+    cout << "Elementos en la cola: ";
+    while (!cola.empty()) {
+        cout << cola.front() << " ";
+        cola.pop();
+    }
+    cout << endl;
+}
+
+void priorityQueueExample() {
+    // Crear una cola de prioridad en orden descendente
+    priority_queue<int> cola_de_prioridad;
+
+    // Agregar elementos a la cola de prioridad
+    cola_de_prioridad.push(5);
+    cola_de_prioridad.push(10);
+    cola_de_prioridad.push(3);
+    cola_de_prioridad.push(15);
+
+    // Mostrar el elemento de mayor prioridad
+    cout << "Elemento de mayor prioridad: " << cola_de_prioridad.top() << endl;
+
+    // Eliminar el elemento de mayor prioridad
+    cola_de_prioridad.pop();
+
+    // Mostrar el nuevo elemento de mayor prioridad
+    cout << "Nuevo elemento de mayor prioridad: " << cola_de_prioridad.top() << endl;
+
+    // Verificar si la cola de prioridad está vacía
+    if (cola_de_prioridad.empty()) {
+        cout << "La cola de prioridad está vacía." << endl;
+    } else {
+        cout << "La cola de prioridad no está vacía." << endl;
+    }
+
+    // Recorrer y mostrar todos los elementos en la cola de prioridad
+    cout << "Elementos en la cola de prioridad: ";
+    while (!cola_de_prioridad.empty()) {
+        cout << cola_de_prioridad.top() << " ";
+        cola_de_prioridad.pop();
+    }
+    cout << endl;
+}
+
+// Ejemplo de cola de prioridad con una struct
+struct Persona {
+    string nombre;
+    int edad;
+
+    // Operador de comparación personalizado
+    bool operator<(const Persona& otra) const {
+        return edad > otra.edad; // Orden descendente por edad
+    }
+};
+
+void priorityQueuePersonaExample(){
+    priority_queue<Persona> cola_de_prioridad;
+
+    Persona p1, p2, p3;
+    p1.edad = 30;
+    p1.nombre = "Alice";
+    p2.edad = 40;
+    p2.nombre = "Bob";
+    p3.edad = 50;
+    p3.nombre = "Charlie";
+
+    // Agregar personas a la cola de prioridad
+    cola_de_prioridad.push(p1);
+    cola_de_prioridad.push(p2);
+    cola_de_prioridad.push(p3);
+
+    // Mostrar la persona de mayor prioridad (la de mayor edad)
+    cout << "La persona de mayor edad es: " << cola_de_prioridad.top().nombre << " (" << cola_de_prioridad.top().edad << " años)" << endl;
+
+    // Eliminar la persona de mayor prioridad
+    cola_de_prioridad.pop();
+
+    // Mostrar la nueva persona de mayor prioridad
+    cout << "La nueva persona de mayor edad es: " << cola_de_prioridad.top().nombre << " (" << cola_de_prioridad.top().edad << " años)" << endl;
+}
+
+void setExample(){
+    // Crear un conjunto de números enteros
+    set<int> miSet;
+
+    // Agregar elementos al conjunto
+    miSet.insert(5);
+    miSet.insert(10);
+    miSet.insert(15);
+    miSet.insert(10); // Los conjuntos no permiten elementos duplicados, por lo que este no se agregará
+
+    // Mostrar el tamaño del conjunto
+    cout << "Tamaño del conjunto: " << miSet.size() << endl;
+
+    // Verificar si un elemento está en el conjunto
+    int elementoBuscado = 10;
+    if (miSet.count(elementoBuscado) > 0) {
+        cout << elementoBuscado << " está en el conjunto." << endl;
+    } else {
+        cout << elementoBuscado << " no está en el conjunto." << endl;
+    }
+
+    // Recorrer y mostrar todos los elementos en el conjunto
+    cout << "Elementos en el conjunto: ";
+    for (const auto& elemento : miSet) {
+        cout << elemento << " ";
+    }
+    cout << endl;
+}
+
+
+void mapExample(){
+    // Crear un mapa de cadenas a enteros
+    map<string, int> miMapa;
+
+    // Agregar elementos al mapa
+    miMapa["Alice"] = 30;
+    miMapa["Bob"] = 25;
+    miMapa["Charlie"] = 35;
+
+    // Mostrar el tamaño del mapa
+    cout << "Tamaño del mapa: " << miMapa.size() << endl;
+
+    // Acceder a un valor a través de una clave
+    string clave = "Bob";
+    if (miMapa.find(clave) != miMapa.end()) {
+        cout << clave << " tiene " << miMapa[clave] << " años." << endl;
+    } else {
+        cout << clave << " no se encontró en el mapa." << endl;
+    }
+
+    // Recorrer y mostrar todos los pares clave-valor en el mapa
+    cout << "Pares clave-valor en el mapa: " << endl;
+    for (const auto& par : miMapa) {
+        cout << par.first << ": " << par.second << " años" << endl;
+    }
+
+}
 
 // Para compilar g++ ejemplos.cpp -o compilation/ejemplos
 int main(){
