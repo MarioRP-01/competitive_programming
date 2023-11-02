@@ -1,3 +1,4 @@
 .DS_Store
+.idea
 cmake-build-debug
 /Module_1_Data_Structure/Ejemplos/src/
